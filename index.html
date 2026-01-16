@@ -1,153 +1,436 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Our Forever Begins — Invitation</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Noto+Serif+Tamil:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg: #fffaf6;
-      --card:#ffffff;
-      --accent:#e91e63;
-      --muted:#6b6b6b;
-      --max:900px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raja ❤️ Janani | Wedding</title>
+
+<style>
+    /* CONTACT – CASUAL STYLE */
+.contact-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--dark);
+}
+
+.contact-text {
+    font-size: 16px;
+    margin-bottom: 14px;
+}
+
+.contact-icon {
+    margin-right: 6px;
+}
+
+/* VENUE – CASUAL STYLE */
+.venue-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--dark);
+}
+
+.venue-address {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* GET DIRECTIONS BUTTON */
+.map-link {
+    display: inline-block;
+    padding: 10px 18px;
+    background: var(--light);      /* light pink (default) */
+    color: var(--white);           /* text always white */
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.map-link:hover {
+    background: var(--primary);   /* dark pink on hover */
+    color: var(--white);
+}
+
+    /* ABOUT US – CASUAL STYLE */
+.about-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.about-text {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.heart-divider {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    color: var(--secondary);
+}
+
+    /* EVENTS – CASUAL STYLE */
+#events h2 {
+    font-size: 32px;
+    color: var(--primary);
+}
+
+.event-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: var(--dark);
+}
+
+.event-line {
+    font-size: 16px;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.event-line span {
+    font-size: 18px;
+}
+
+/* soft divider */
+.event-divider {
+    margin: 25px 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--secondary), transparent);
+}
+
+:root {
+    --primary: #D01F56;
+    --secondary: #EE67A1;
+    --light: #FAD8E6;
+    --white: #ffffff;
+    --dark: #4a1c2a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+}
+/* FOOD MENU – CASUAL STYLE */
+.menu-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--dark);
+}
+
+.menu-item {
+    font-size: 16px;
+    margin: 6px 0;
+}
+
+.menu-divider {
+    margin: 20px 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--secondary), transparent);
+}
+
+/* NAVBAR */
+nav {
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    padding: 18px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--white);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.hero-full-image {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 30px;
+    box-shadow: 0 25px 55px rgba(208,31,86,0.35);
+}
+
+/* SECTION */
+section {
+    padding: 90px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 34px;
+    color: var(--primary);
+    margin-bottom: 25px;
+}
+
+/* CARD */
+.card {
+    background-color: var(--white);
+    max-width: 820px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 22px;
+    box-shadow: 0 15px 35px rgba(208,31,86,0.15);
+}
+
+.card p {
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+/* LOCATION BG */
+.right {
+    background: linear-gradient(to right, var(--secondary), var(--light));
+}
+
+.left {
+    background: linear-gradient(to left, var(--secondary), var(--light));
+}
+
+/* MAP LINK */
+.map-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.map-link:hover {
+    text-decoration: underline;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 20px;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      background: linear-gradient(180deg,#ffe6f0 0%, #ffd1e1 100%);
-      color:#222;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      padding:48px 16px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      min-height:100vh;
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
-    .card{
-      width:100%;
-      max-width:var(--max);
-      background:var(--card);
-      border-radius:16px;
-      box-shadow:0 8px 30px rgba(24,24,24,0.08);
-      padding:36px;
-      border:1px solid rgba(176,106,179,0.08);
+
+    section {
+        padding: 60px 15px;
     }
-    .title{
-      text-align:center;
-      font-weight:700;
-      font-size:28px;
-      color:var(--accent);
-      letter-spacing:0.6px;
-      margin-bottom:12px;
+
+    .hero-full-image {
+        max-width: 100%;
+        border-radius: 18px;
     }
-    .subtitle{
-      text-align:center;
-      font-family: 'Noto Serif Tamil', serif;
-      white-space:pre-line;
-      font-size:18px;
-      line-height:1.6;
-      color:#222;
-      margin-bottom:22px;
-    }
-    .names{
-      text-align:center;
-      font-weight:700;
-      font-size:20px;
-      margin:10px 0 22px 0;
-    }
-    .section{
-      display:flex;
-      gap:20px;
-      flex-wrap:wrap;
-      justify-content:center;
-      margin-bottom:18px;
-    }
-    .box{
-      background:linear-gradient(180deg, rgba(176,106,179,0.04), rgba(176,106,179,0.02));
-      border-radius:10px;
-      padding:14px 18px;
-      min-width:240px;
-      max-width:420px;
-      box-shadow:0 4px 18px rgba(16,16,16,0.03);
-      border:1px solid rgba(176,106,179,0.06);
-    }
-    .box h4{margin:0 0 8px 0;font-size:14px;color:var(--accent)}
-    .box p{margin:0;color:var(--muted);font-size:15px;line-height:1.5}
-    .directions{margin-top:6px;font-size:15px;color:#333}
-    .footer{
-      text-align:center;
-      margin-top:22px;
-      color:#444;
-      font-size:14px;
-    }
-    .actions{display:flex;gap:12px;justify-content:center;margin-top:18px}
-    button{cursor:pointer;border:0;padding:10px 14px;border-radius:10px;font-weight:600}
-    .btn-print{background:var(--accent);color:white}
-    .btn-download{background:#eee;color:#333}
-    @media print{
-      body{padding:0}
-      .card{box-shadow:none;border:none}
-      .actions{display:none}
-    }
-  </style>
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 22px;
+    font-size: 14px;
+}
+</style>
 </head>
+
 <body>
-  <div class="card" id="inviteCard">
-    <div class="title">Our Forever Begins</div>
 
-    <div class="subtitle" style="font-family: 'Noto Serif Tamil', serif;"></div>
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">Raja 💗 Janani</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <!--li><a href="#about">About Us</a></li-->
+        <li><a href="#events">Events</a></li>
+        <li><a href="#food">Food Menu</a></li>
+        <li><a href="#location">Venue</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <div class="names">Rajaram &nbsp;&nbsp;WEDS&nbsp;&nbsp; Janani</div>
+<!-- HERO (RESPONSIVE IMAGE) -->
+<div class="hero" id="home">
+    <picture>
+        <!-- Mobile Image -->
+        <source srcset="mobile.jpg" media="(max-width: 768px)">
+        <!-- Desktop Image -->
+        <source srcset="CENTRE_50.jpg" media="(min-width: 769px)">
+        <img src="CENTRE_50.jpg" 
+             alt="Raja and Janani Wedding" 
+             class="hero-full-image">
+    </picture>
+</div>
 
-    
+<!-- ABOUT US -->
+<!--section id="about" class="left">
+    <h2>About Us</h2>
 
-    <div class="box" style="margin:0 auto;max-width:820px;">
-      <p style="white-space:pre-line; font-family: 'Noto Serif Tamil', serif; color:#222">முடிவில்லா தொடக்கமாக புதிய அதியாயம் ஒன்றை வாழ்க்கையில் தொடங்குகிறோம்.
-அதன் முதல் வரியை எழுதும் இந்த அழகிய தருணத்தில்,
-உங்கள் இணைவு எங்களுக்கு மிக முக்கியம்.
+    <div class="card">
 
-இந்தப் பயணத்திற்கு இன்னும் அழகை சேர்க்க, உங்கள் வருகைக்காக காத்திருப்போம்.</p>
+        <div class="about-title">🤵 Groom’s Family</div>
+        <div class="about-text">
+            Family Name 1, Family Name 2
+        </div>
+
+        <div class="heart-divider">💗</div>
+
+        <div class="about-title">👰 Bride’s Family</div>
+        <div class="about-text">
+            Family Name 1, Family Name 2
+        </div>
+
     </div>
+</section-->
 
-<div class="section">
-      <div class="box">
-        <h4>Reception</h4>
-        <p>Saturday, 21 February 2026<br>Between 6:00 PM and 10:00 PM</p>
-      </div>
 
-      <div class="box">
-        <h4>Wedding Ceremony</h4>
-        <p>Sunday, 22 February 2026<br>Between 7:30 AM and 9:00 AM</p>
-      </div>
+<!-- EVENTS -->
+<section id="events" class="right">
+    <h2>Wedding Events</h2>
+
+    <div class="card">
+
+        <div class="event-title">🎉 Reception – Feb 21</div>
+
+        <div class="event-line"><span>🕕</span>6:00 PM – Let the celebration begin</div>
+        <div class="event-line"><span>🎧</span>6:30 PM – DJ session starts </div>
+        <div class="event-line"><span>🎶</span>9:00 PM – Friends take over the DJ</div>
+        <div class="event-line"><span>💑</span>9:10 PM – Couple’s special DJ moment</div>
+        <div class="event-line"><span>👨‍👩‍👧‍👦</span>9:20 PM – Family DJ & fun</div>
+
+        <div class="event-divider"></div>
+
+        <div class="event-title">💍 Wedding – Feb 22</div>
+        <div class="event-line"><span>🕢</span>7:30 AM – 9:00 AM</div>
+        <div class="event-line"><span>🙏</span>Join us for blessings & love</div>
+
     </div>
-    <div class="box" style="margin:16px auto 0; max-width:820px;">
-      <h4>Location & Directions</h4>
-      <p class="directions"><strong>Bus routes:</strong> 1, 1A, 1B, 1C, 8A, 56C, C56C, 56D, 101 — Royapuram Police Station stop.<br>
-<strong>Metro:</strong> Just 1 km walkable from Tondiarpet Metro Station.</p>
+</section>
+
+
+
+<!-- FOOD -->
+<section id="food" class="left">
+    <h2>Menu</h2>
+
+    <div class="card">
+<div class="menu-title">Update soon</div>
+        <!-- <div class="menu-title">🌙 Night Reception</div>
+        <div class="menu-item">🍚 Idly</div>
+        <div class="menu-item">🥞 Dosa</div>
+        <div class="menu-item">🍛 Rice</div>
+
+        <div class="menu-divider"></div>
+
+        <div class="menu-title">🌅 Morning Wedding</div>
+        <div class="menu-item">🍲 Pongal</div>
+        <div class="menu-item">🥟 Vada</div> -->
+
     </div>
+</section>
 
-    <div class="actions">
-      <button class="btn-download" id="downloadBtn">Download HTML</button>
-      <button class="btn-print" onclick="window.print()">Print / Save PDF</button>
+
+<!-- LOCATION -->
+<section id="location" class="right">
+    <h2>Venue</h2>
+
+    <div class="card">
+
+        <div class="venue-name">🏛 Princess Palace </div>
+
+        <div class="venue-address">
+            SN, Namasivaya Chetty St, Kanniyappan Colony, Kamaraj Nagar, Tondiarpet, Chennai - 600013
+        </div>
+
+        <a class="map-link"
+           href="https://maps.app.goo.gl/KR8EVNUPjsLtfvcp6"
+           target="_blank">
+            📍 Get Directions
+        </a>
+
     </div>
+</section>
 
-    <div class="footer">For enquiries / RSVP, contact Rajaram</div>
-  </div>
 
-  <script>
-    // Download the current HTML as a file
-    document.getElementById('downloadBtn').addEventListener('click', function(){
-      const html = '<!doctype html>' + document.documentElement.outerHTML;
-      const blob = new Blob([html], {type: 'text/html'});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url; a.download = 'invitation.html'; document.body.appendChild(a); a.click(); a.remove();
-      URL.revokeObjectURL(url);
-    });
-  </script>
+<!-- CONTACT -->
+<section id="contact" class="left">
+    <h2>Contact</h2>
+
+    <div class="card">
+
+        <div class="contact-text">
+            <span class="contact-icon">👨‍👩‍👦</span>
+            <strong>Groom’s Family</strong><br>
+         Kosalram -
+        📞 9841515015
+        </div>
+
+        <div class="contact-text">
+            <span class="contact-icon">🤝</span>
+           <strong>Groom’s Friends</strong><br>
+        Siva – 📞 9094900215<br>
+        Nagaraj – 📞 8754148967
+
+    </div>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer>
+    With love 💕 Raja & Janani
+</footer>
+
 </body>
 </html>
